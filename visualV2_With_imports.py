@@ -57,7 +57,8 @@ def test_colors():
 def test_reset():
     test_colors()
     render_frame()
-    print(" ==Testing Done==\n")
+    clear_previous_outputs(10)
+    print("==Testing Done==\n")
     time.sleep(0.75)
     clear_previous_outputs(10)
     print(f"{r}==Testing Done==\n")
