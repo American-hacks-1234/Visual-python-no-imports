@@ -32,7 +32,7 @@ def clear_grid():
             row[i] = w
 
 def render_frame():
-    time.sleep(0.5)
+    time.sleep(0.01)
     clear_previous_outputs(10)
     """Render the current frame to terminal"""
     for row in grid:
@@ -44,10 +44,11 @@ def set_cell(x, y, color):
     y = row (0-6)
     color = color code (r, w, b, g, p, G)
     """
+    y=5-y
     if 0 <= y < 6 and 0 <= x < 7:
         grid[y][x] = color
     else:
-        print(f"Error: coordinates out of bounds (x: 0-7, y: 0-6)")
+        print(f"Error: coordinates out of bounds (x: 0-6, y: 0-5)")
 
 def test_colors():
     """Test all available colors"""
